@@ -1,8 +1,4 @@
 FROM ruby:3.0
-
-WORKDIR /usr/src/app
-
-COPY Gemfile Gemfile.lock ./
+WORKDIR /app
+ADD Gemfile* $WORKDIR/
 RUN bundle install
-
-COPY . .

@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  node1:
+    build: .
+    environment:
+      - REDIS_HOST=redis1
+    ports:
+      - "8001:8000"
+    volumes:
+      - .:/app
+    links:
+      - redis1
+  redis1:
+    image: redis
