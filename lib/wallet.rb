@@ -2,7 +2,6 @@ require 'ecdsa'
 require 'securerandom'
 require 'digest'
 require 'base58'
-require './database.rb'
 
 class Wallet
   DB_KEY_PREFIX = 'wallet::'.freeze
